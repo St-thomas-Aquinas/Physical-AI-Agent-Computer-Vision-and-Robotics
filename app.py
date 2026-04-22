@@ -10,10 +10,11 @@ from collections import deque
 
 IMG_SIZE = (128, 128)
 
-MODEL_PATH = "best_model (2).h5"  # saved model
+MODEL_PATH = "best_model (2).h5"  # saved model 
  
-DEVICE_URL = "http://192.168.1.101/receive"  # ESP/Arduino endpoint
-CONF_THRESHOLD = 0.85
+DEVICE_URL = "http://192.168.45.218/receive"  # ESP/Arduino endpoint
+
+CONF_THRESHOLD = 0.87
 COOLDOWN = 5  # seconds between sending alerts
 
 # === LOAD MODEL ===
@@ -40,7 +41,7 @@ def predict_image(path, class_labels):
     # --- If animal, send to Wi-Fi ---
     if class_labels[idx] != "Humans" and conf >= CONF_THRESHOLD:
         try:
-            requests.get(f"{DEVICE_URL}?animal={class_labels[idx]}&conf={conf:.2f}")
+            requests.get(f"{DEVICE_URL}")
             print(f" Alert sent: {class_labels[idx]} ({conf:.2%})")
         except:
             print("Could not reach WiFi device")
