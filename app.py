@@ -5,25 +5,22 @@ import requests
 import time
 from keras.preprocessing.image import load_img, img_to_array
 from collections import deque
-
-# === CONFIG ===
+ 
 
 IMG_SIZE = (128, 128)
 
 MODEL_PATH = "best_model (2).h5"  # saved model 
  
-DEVICE_URL = "http://192.168.45.218/receive"  # ESP/Arduino endpoint
+DEVICE_URL = "http://192.168.1.103/receive"  # ESP/Arduino endpoint
+CONF_THRESHOLD = 0.85
+COOLDOWN = 5  
 
-CONF_THRESHOLD = 0.87
-COOLDOWN = 5  # seconds between sending alerts
-
-# === LOAD MODEL ===
+#  LOAD MODEL
 model = tf.keras.models.load_model(MODEL_PATH)
 
-# === CLASS LABELS === (match your dataset order)
+
 class_labels = ["Cows", "Goats", "Hippo", "Humans", "Hyenas", "Moneys" ,"elephant"]
 
-# === Prediction history for smoothing ===
 preds_history = deque(maxlen=5)
 
 # === Predict Single Image ===
