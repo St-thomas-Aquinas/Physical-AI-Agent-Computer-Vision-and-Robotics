@@ -7,7 +7,7 @@ An AI + IoT system that uses CNN-based animal classification and an ESP32-contro
 - **Stella Stephani** – Team Lead & Hardware Programmer  
 - **Carren Chepngetic** – Hardware Programmer  
 - **Emmanual Masau** – Hardware Engineer  
-- **Maxwell Kuria** – ML Engineer  
+- **Maxwell Kuria** – ML Engineer  (This is me)
 - **Pruden** – Team Member  
 - **Harison** – Dataset Collection  
 ## Problem Statement
