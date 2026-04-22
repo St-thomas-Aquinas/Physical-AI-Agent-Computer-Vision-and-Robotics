@@ -2,6 +2,14 @@
 
 An AI + IoT system that uses CNN-based animal classification and an ESP32-controlled robotic arm to protect farms from wild animal intrusions.
 
+## Team Partners
+
+- **Stella Stephani** – Team Lead & Hardware Programmer  
+- **Carren Chepngetic** – Hardware Programmer  
+- **Emmanual Masau** – Hardware Engineer  
+- **Maxwell Kuria** – ML Engineer  
+- **Pruden** – Team Member  
+- **Harison** – Dataset Collection  
 ## Problem Statement
 
 Farmers face significant losses due to wild animals invading their farms. Traditional solutions like scarecrows, fences, or human patrols are costly, unsafe, and often ineffective. Our system provides a smart, automated, and non-lethal deterrent to protect crops while promoting human-wildlife coexistence.
